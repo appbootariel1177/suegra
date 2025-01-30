@@ -19,15 +19,26 @@ h1 {
 
 button {
     width: 100%;
-    padding: 15px;
+    height: 200px; /* Aumentar altura para hacer el botón cuadrado más alto */
+    padding: 0; /* Eliminar padding para mantener el cuadrado */
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 32px; /* Texto más grande */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px; /* Bordes redondeados */
     cursor: pointer;
     transition: 0.3s;
+    background-color: #e0e0e0; /* Color gris claro */
+    color: #333; /* Color del texto negro */
 }
 
 button:hover {
     opacity: 0.8;
+}
+
+/* Media query para móviles */
+@media (max-width: 600px) {
+    button {
+        height: 160px; /* Ajustar altura para móviles */
+        font-size: 28px; /* Ajustar tamaño del texto para móviles */
+    }
 }

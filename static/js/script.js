@@ -4,33 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Lista de frases con audios
     const frases = [
-        { texto: "Tengo hambre", audio: "static/audio/hambre.mp3" },
-        { texto: "Tengo sed", audio: "static/audio/sed.mp3" },
-        { texto: "Necesito ayuda", audio: "static/audio/ayuda.mp3" },
-        { texto: "Me siento cansada", audio: "static/audio/cansada.mp3" },
-        { texto: "Quiero ir al baño", audio: "static/audio/baño.mp3" },
-        { texto: "Me duele algo", audio: "static/audio/dolor.mp3" }
+        { texto: "Quiero dormir", audio: "static/audio/quiero dormir.mp3" },
+        { texto: "Quiero ir al baño", audio: "static/audio/quiero ir al baño.mp3" },
+        { texto: "Me duele la pierna", audio: "static/audio/me duele la pierna.mp3" },
+        { texto: "Masajes en las piernas", audio: "static/audio/masajes en las piernas.mp3" },
+        { texto: "Acomodar almuada", audio: "static/audio/acomodame la almuada.mp3" },
+        { texto: "Saludo cordial", audio: "static/audio/romer los huevos.mp3" }
     ];
 
     // Generar botones dinámicamente
     frases.forEach(frase => {
         let btn = document.createElement("button");
         btn.textContent = frase.texto;
-        btn.style.backgroundColor = getRandomColor();
         btn.addEventListener("click", function () {
             audio.src = frase.audio;
             audio.play();
         });
         botonesContainer.appendChild(btn);
     });
-
-    // Generar color aleatorio
-    function getRandomColor() {
-        let letters = "0123456789ABCDEF";
-        let color = "#";
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
 });
